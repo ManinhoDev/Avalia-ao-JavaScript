@@ -1,5 +1,5 @@
 
-function contagemregre() {
+function Faixaetaria() {
     let idade = parseInt(prompt("Digite sua idade:"));
 
     if (isNaN(idade)) {

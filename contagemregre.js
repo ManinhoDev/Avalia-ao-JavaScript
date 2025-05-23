@@ -1,24 +1,15 @@
-function classificarIdade() {
-    let idade = parseInt(prompt("Digite sua idade:"));
 
-    if (isNaN(idade)) {
-        document.write("Idade inválida. Por favor, digite um número.");
+function contadorRegressivo() {
+    let num = Number(prompt("Digite um número maior que zero:"));
+
+    if (!Number.isInteger(num) || num <= 0) {
+        document.writeln("Número inválido!");
         return;
     }
 
-    let classificacao;
-
-    if (idade <= 12) {
-        classificacao = "Criança";
-    } else if (idade >= 13 && idade <= 17) {
-        classificacao = "Adolescente";
-    } else if (idade >= 18 && idade <= 59) {
-        classificacao = "Adulto";
-    } else if (idade >= 60) {
-        classificacao = "Idoso";
-    } else {
-        classificacao = "Valor de idade não reconhecido.";
+    document.writeln("Contagem regressiva:<br>");
+    while (num >= 0) {
+        document.writeln(num + "<br>");
+        num--;
     }
-
-    document.write("Classificação: " + classificacao);
 }
